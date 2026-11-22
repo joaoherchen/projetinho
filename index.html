@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b18">
+  <meta name="description" content="Uma jornada escolar em formato de videogame: memórias, fases e redações.">
+  <title>Continue? — Minha jornada escolar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game-ui.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <script src="assets/redacoes.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-icon">▶</span> SAVE<span>_</span>FILE</a>
+    <nav aria-label="Navegação principal">
+      <a href="#memorias">Memórias</a><a href="#redacoes">Redações <i>17</i></a>
+    </nav>
+    <div class="top-actions"><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Ativar sons do site">♪ SOM: OFF</button><a class="top-cta" href="#memorias">Jogar minha história <span>↗</span></a></div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> ARQUIVO DE MEMÓRIAS · JOÃO</p>
+        <p class="terminal-command"><span>joao@savefile</span><b>:~$</b> ./reabrir_memorias <i>READY</i></p>
+        <h1>Uma vida.<br><span>Várias fases.</span></h1>
+        <p class="hero-text">Cada ano foi uma nova fase. Entre descobertas, amizades e desafios, esta é a jornada que me trouxe até aqui.</p>
+        <a class="pixel-button" href="#memorias"><span aria-hidden="true">↘</span> Conhecer minhas memórias</a>
+        <div class="hero-meta"><span>João</span><span>Formando do Ensino Médio</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="console-caption"><span>CONTROLE DO JOGADOR 01</span><span><i></i> CONECTADO</span></div>
+        <div class="gamepad" role="group" aria-label="Controle interativo: navegue pelas memórias e redações">
+          <svg class="gamepad-shell" viewBox="0 0 600 350" role="img" aria-label="Controle de videogame"><defs><linearGradient id="padFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#39375f"/><stop offset=".48" stop-color="#282644"/><stop offset="1" stop-color="#201f39"/></linearGradient><filter id="padGlow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M177 79C210 37 253 35 300 61c47-26 90-24 123 18l81 39c33 16 58 45 68 82l19 72c11 42-31 72-65 43l-83-70H157l-83 70c-34 29-76-1-65-43l19-72c10-37 35-66 68-82z" fill="url(#padFill)" stroke="#514e79" stroke-width="4" filter="url(#padGlow)"/><path d="M180 95c31-34 61-40 102-18m138 18c-31-34-61-40-102-18" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3"/><path d="M110 133l-18 61h49l17-51zm380 0l18 61h-49l-17-51z" fill="#17162a" opacity=".78"/></svg>
+          <button class="pad-trigger trigger-left" data-photo-step="-1" aria-label="Foto anterior">L1</button><button class="pad-trigger trigger-right" data-photo-step="1" aria-label="Próxima foto">R1</button>
+          <div class="dpad" role="group" aria-label="Direcional: use esquerda e direita para trocar de foto"><button data-photo-step="-1" aria-label="Foto anterior">◀</button><button data-photo-step="1" aria-label="Próxima foto">▶</button><button data-photo-step="-1" class="up" aria-label="Foto anterior">▲</button><button data-photo-step="1" class="down" aria-label="Próxima foto">▼</button><span></span></div>
+          <button class="thumb-stick stick-left" data-pad-action="open-current-photo" aria-label="Abrir foto selecionada"><i></i><span>L3</span></button><button class="thumb-stick stick-right" data-pad-action="focus-search" aria-label="Buscar redação"><i></i><span>R3</span></button>
+          <div class="face-buttons"><button class="key-y" data-scroll="redacoes" aria-label="Ir para as redações">△</button><button class="key-x" data-open-photo="2" aria-label="Abrir foto 3">□</button><button class="key-b" data-open-photo="1" aria-label="Abrir foto 2">○</button><button class="key-a" data-open-photo="0" aria-label="Abrir foto 1">×</button></div>
+          <div class="pad-center"><button data-scroll="memorias">SELECT</button><button data-scroll="redacoes">START</button></div>
+        </div>
+        <div class="controller-legend"><span><b class="legend-abxy">□ ○ ×</b> ABRIR FOTO</span><span><b>L1 / R1 · ◀ ▶</b> TROCAR</span><span><b>SELECT</b> MEMÓRIAS <b>· START</b> REDAÇÕES</span><span><b>L3</b> ABRIR <b>· R3</b> BUSCAR</span></div>
+        <p class="controller-prompt">APERTE UM BOTÃO DO CONTROLE PARA JOGAR</p>
+        <details class="keyboard-help"><summary>ATALHOS DO TECLADO</summary><p>Tab percorre os controles · Enter ativa · ← / → trocam fotos com o controle ou flashcard focado · 1, 2, 3 abrem uma foto · Esc fecha a janela</p></details>
+      </div>
+      <div class="hero-bottom"><span>SCROLL PARA EXPLORAR</span><span class="scroll-line"></span><span>01 / 02</span></div>
+    </section>
+
+    <section class="section memories" id="memorias">
+      <div class="section-heading"><div><p class="eyebrow">01 — MODO HISTÓRIA</p><h2>Minhas <span>memórias</span></h2></div><p class="section-intro">Fotos da minha jornada escolar e da minha família. Use o controle para abrir cada flashcard e navegar pelas lembranças.</p></div>
+      <div class="photo-gallery" id="photo-gallery"></div>
+    </section>
+
+    <section class="section essays" id="redacoes">
+      <div class="section-heading"><div><p class="eyebrow">02 — INVENTÁRIO DE PALAVRAS</p><h2>Portfólio de <span>redações</span></h2></div><p class="section-intro">17 produções das aulas de Português e Redação. Abra um card para ler o texto integral, com a divisão de parágrafos do documento.</p></div>
+      <div class="essay-toolbar"><span><b>17</b> TEXTOS NO SAVE</span><label class="search-box"><span aria-hidden="true">⌕</span><input id="essay-search" type="search" placeholder="Buscar por tema ou número..." aria-label="Buscar redações"></label></div>
+      <div class="essay-grid" id="essay-grid"></div>
+      <p class="sr-only" id="status-announcer" aria-live="polite" aria-atomic="true"></p>
+      <div class="essay-footer"><span>FIM DO INVENTÁRIO</span><span>17 / 17 <b>◆</b></span></div>
+    </section>
+    <footer><a class="brand" href="#inicio"><span class="brand-icon">▶</span> SAVE<span>_</span>FILE</a><span>FIM DE JOGO? SÓ O COMEÇO. <b>♥</b></span><a href="#inicio">VOLTAR AO TOPO ↑</a></footer>
+  </main>
+
+  <dialog id="memory-dialog" class="dialog memory-dialog" aria-labelledby="memory-dialog-title"><button class="dialog-close" aria-label="Fechar flashcard">×</button><div class="memory-dialog-content"></div></dialog>
+  <dialog id="essay-dialog" class="dialog essay-dialog" aria-labelledby="essay-dialog-title"><button class="dialog-close" aria-label="Fechar redação">×</button><div class="essay-dialog-content"></div></dialog>
+</body>
+</html>
